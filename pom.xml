@@ -44,4 +44,16 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>deployment-release</id>
+			<name>releases</name>
+			<url>https://maven.pkg.github.com/inchworksinc/library-packages/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>deployment-snapshot</id>
+			<name>snapshots</name>
+			<url>https://maven.pkg.github.com/inchworksinc/library-packages/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
