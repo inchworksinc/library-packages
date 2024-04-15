@@ -46,14 +46,9 @@
 
 	<distributionManagement>
 		<repository>
-			<id>deployment-release</id>
+			<id>deployment</id>
 			<name>releases</name>
 			<url>https://maven.pkg.github.com/inchworksinc/library-packages</url>
 		</repository>
-		<snapshotRepository>
-			<id>deployment-snapshot</id>
-			<name>snapshots</name>
-			<url>https://maven.pkg.github.com/inchworksinc/library-packages</url>
-		</snapshotRepository>
 	</distributionManagement>
 </project>
