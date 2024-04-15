@@ -18,3 +18,5 @@ jobs:
           java-version: '21'
       - name: Installing dependencies and creating jar
         run: mvn clean install
+      - name: Deploying snapshot to packages
+        run: mvn deploy
