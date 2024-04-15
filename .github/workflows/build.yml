@@ -20,7 +20,8 @@ jobs:
       - name: Installing dependencies and creating jar
         run: mvn clean install
       - name: Deploying snapshot to packages
-        run: mvn deploy
+        run: |
+          echo "<settings><servers><server><id>github</id><username>anjaneyalndatla</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
+          mvn deploy
         env:
-          MAVEN_USERNAME: anjaneyalndatla
-          MAVEN_PASSWORD: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
