@@ -17,10 +17,10 @@ jobs:
           distribution: 'corretto'
           java-version: '21'
           overwrite-settings: true
-          server-id: deployment-snapshot
-          server-username: anjaneyalndatla
-          server-password: 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
       - name: Installing dependencies and creating jar
         run: mvn clean install
       - name: Deploying snapshot to packages
         run: mvn deploy
+        env:
+          MAVEN_USERNAME: anjaneyalndatla
+          MAVEN_PASSWORD: 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
