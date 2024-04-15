@@ -1,0 +1,20 @@
+name: build-snapshot
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  buildSnapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out source code
+        uses: actions/checkout@v3
+      - name: Setting up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto'
+          java-version: '21'
+      - name: Installing dependencies and creating jar
+        run: mvn clean install
