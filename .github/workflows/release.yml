@@ -22,15 +22,16 @@ jobs:
           overwrite-settings: true
       - name: Configure Git User
         run: |
-          git config user.email ${GITHUB_ACTOR}@fbitn.com
+          git config user.email ${GITHUB_ACTOR}@gmail.com
           git config user.name ${GITHUB_ACTOR}
         env:
           GITHUB_ACTOR: ${{ github.actor }}
-          
+
       - name: Maven Release
         run: | 
           echo "<settings><servers><server><id>deployment</id><username>anjaneyalndatla</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
           mvn release:prepare release:perform -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
   
