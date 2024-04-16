@@ -56,6 +56,6 @@
 		<connection>scm:git:https://github.com/inchworksinc/library-packages.git</connection>
 		<url>scm:git:https://github.com/inchworksinc/library-packages.git</url>
 		<developerConnection>scm:git:https://github.com/inchworksinc/library-packages.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>0.0.9-release</tag>
 	</scm>
 </project>
