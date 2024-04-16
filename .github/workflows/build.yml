@@ -29,7 +29,7 @@ jobs:
       - name: Installing dependencies and creating jar
         run: mvn clean install 
       - name: Deploying snapshot to packages
-        run: mvn deploy -DskipTests -s ${{ inputs.SETTINGS_FILE }}
+        run: mvn deploy -DskipTests -s settings.xml
         env:
           GITHUB_PACKAGES_USERNAME: anjaneyalndatla
           GITHUB_PACKAGES_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
