@@ -22,6 +22,7 @@ jobs:
           overwrite-settings: true
       - name: Configure Git User
         run: |
+          echo "Actor -- ${GITHUB_ACTOR}"
           git config user.email ${GITHUB_ACTOR}@gmail.com
           git config user.name ${GITHUB_ACTOR}
         env:
