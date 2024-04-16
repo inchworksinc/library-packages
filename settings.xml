@@ -13,7 +13,7 @@
 				<repository>
 					<id>deployment</id>
 					<name>Internal Releases</name>
-					<url>http://devtools1.tfic.com:8081/nexus/content/repositories/releases</url>
+					<url>https://maven.pkg.github.com/inchworks/library-packages</url>
 				</repository>
 			</repositories>
 		</profile>
