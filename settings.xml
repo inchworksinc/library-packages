@@ -2,8 +2,8 @@
 	<servers>
 		<server>
 			<id>deployment</id>
-			<username>${GITHUB_PACKAGES_USERNAME}</username>
-			<password>${GITHUB_PACKAGES_PASSWORD}</password>
+			<username>anjaneyalndatla</username>
+			<password>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</password>
 		</server>
 	</servers>
 	<profiles>
