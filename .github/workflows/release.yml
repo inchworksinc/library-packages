@@ -27,7 +27,7 @@ jobs:
           echo "Actor -- ${GITHUB_ACTOR}"
           git config user.email ${GITHUB_ACTOR}@gmail.com
           git config user.name ${GITHUB_ACTOR}
-          echo git config --list
+          git config --list
           mvn release:prepare release:perform -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
