@@ -1,0 +1,24 @@
+<settings>
+	<servers>
+		<server>
+			<id>deployment</id>
+			<username>${GITHUB_PACKAGES_USERNAME}</username>
+			<password>${GITHUB_PACKAGES_PASSWORD}</password>
+		</server>
+	</servers>
+	<profiles>
+		<profile>
+			<id>fbitn-repo</id>
+			<repositories>
+				<repository>
+					<id>deployment</id>
+					<name>Internal Releases</name>
+					<url>http://devtools1.tfic.com:8081/nexus/content/repositories/releases</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>fbitn-repo</activeProfile>
+	</activeProfiles>
+</settings>
