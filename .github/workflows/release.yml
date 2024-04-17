@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checking out source code
         uses: actions/checkout@v3
+        env:
+          token: ${{ secrets.PAT_TOKEN }}
       - name: Setting up JDK 21
         uses: actions/setup-java@v3
         with:
@@ -26,7 +28,6 @@ jobs:
         run: | 
           git config user.email ${GITHUB_ACTOR}@gmail.com
           git config user.name ${GITHUB_ACTOR}
-          git config user.password ${GITHUB_TOKEN}
           git config --list
           echo "hello 2" > test.yml
           git add .
