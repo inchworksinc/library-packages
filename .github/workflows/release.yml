@@ -17,14 +17,6 @@ jobs:
     steps:
       - name: Checking out source code
         uses: actions/checkout@v4
-        run: |
-          git config user.email ${GITHUB_ACTOR}@gmail.com
-          git config user.name ${GITHUB_ACTOR}
-          git config --list
-          echo "hello 2" > test.yml
-          git add .
-          git commit -m "test"
-          git push origin main
         env:
           token: ${{ secrets.asdasdasd }}
       - name: Setting up JDK 21
