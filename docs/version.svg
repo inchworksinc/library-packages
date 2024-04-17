@@ -4,7 +4,7 @@
         svg {
         font-family: monospace;
         font-size: medium;
-        fill: white;
+        fill: yellow;
         }
     </style>
 
