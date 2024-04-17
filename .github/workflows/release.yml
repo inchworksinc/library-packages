@@ -18,7 +18,7 @@ jobs:
       - name: Checking out source code
         uses: actions/checkout@v3
         env:
-          token: ${{ secrets.PAT_TOKEN1 }}
+          token: ${{ secrets.PAT_TOKEN1qweqwe }}
       - name: Setting up JDK 21
         uses: actions/setup-java@v3
         with:
