@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xml:lang="en-GB" width="25em" height="7em">
+    <style>
+        svg {
+        font-family: monospace;
+        font-size: medium;
+        fill: white;
+        background: black;
+        }
+    </style>
+
+    <text x="0" y="1em">
+        <tspan x="3em" dy="1em"> Latest Version :${project.version}</tspan>
+    </text>
+
+</svg>
