@@ -16,7 +16,7 @@ jobs:
       packages: write
     steps:
       - name: Checking out source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         env:
           token: ${{ secrets.PAT_TOKEN1qweqwe }}
       - name: Setting up JDK 21
