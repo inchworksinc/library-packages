@@ -31,7 +31,7 @@ jobs:
           git commit -m "test"
           git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
       # - name: Maven Release
       #   run: | 
