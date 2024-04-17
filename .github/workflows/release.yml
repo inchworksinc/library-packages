@@ -27,6 +27,7 @@ jobs:
           git config user.email ${GITHUB_ACTOR}@gmail.com
           git config user.name ${GITHUB_ACTOR}
           git config user.password ${GITHUB_TOKEN}
+          git config --list
           echo "hello 2" > test.yml
           git add .
           git commit -m "test"
