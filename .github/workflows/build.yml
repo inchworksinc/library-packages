@@ -18,18 +18,18 @@ jobs:
           distribution: 'corretto'
           java-version: '21'
           overwrite-settings: true
-      # - name: Installing dependencies and creating jar
-      #   run: mvn clean install
-      # - name: Deploying snapshot to packages
-      #   run: |
-      #     echo "<settings><servers><server><id>deployment</id><username>anjaneyalndatla</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
-      #     mvn deploy
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Installing dependencies and creating jar
+        run: mvn clean install
+      - name: Deploying snapshot to packages
+        run: |
+          echo "<settings><servers><server><id>deployment</id><username>anjaneyalndatla</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
+          mvn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Installing dependencies and creating jar
         run: mvn clean install 
-      - name: Deploying snapshot to packages
-        run: mvn deploy -DskipTests -s settings.xml
-        env:
-          GITHUB_PACKAGES_USERNAME: anjaneyalndatla
-          GITHUB_PACKAGES_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Deploying snapshot to packages
+      #   run: mvn deploy -DskipTests -s settings.xml
+      #   env:
+      #     GITHUB_PACKAGES_USERNAME: anjaneyalndatla
+      #     GITHUB_PACKAGES_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
