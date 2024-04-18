@@ -102,7 +102,7 @@
 		<repository>
 			<id>deployment</id>
 			<name>releases</name>
-			<url>https://maven.pkg.github.com/inchworksinc</url>
+			<url>https://maven.pkg.github.com/inchworksinc/library-packages</url>
 		</repository>
 	</distributionManagement>
 
