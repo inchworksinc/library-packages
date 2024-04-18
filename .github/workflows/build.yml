@@ -26,8 +26,8 @@ jobs:
           mvn deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Installing dependencies and creating jar
-        run: mvn clean install 
+      # - name: Installing dependencies and creating jar
+      #   run: mvn clean install 
       # - name: Deploying snapshot to packages
       #   run: mvn deploy -DskipTests -s settings.xml
       #   env:
